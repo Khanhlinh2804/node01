@@ -43,7 +43,6 @@ app.get('/index-author',(req,res)=>{
         if (err) {
             res.send(err);
         } else {
-            // chuyeenr duwx lieeuj sang view hieenr thij
             res.render("author/index-author", { author });
         }
     });
