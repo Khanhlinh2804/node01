@@ -1,0 +1,30 @@
+<%-include('../layouts/header.ejs') %>
+<div class="container">
+    <a href="/add-author" class="btn btn-success">Add</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>CRUD</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% author.forEach((item,index) => { %>
+             
+                <tr>
+                    <td><%= index + 1 %> </td>
+                    <td><%= item.name %> </td>
+                    <td><%= item.status ? 'Hiện' : 'Ẩn' %> </td>
+                    <td>
+                        <a href="" class="btn btn-danger">Delete</a>
+                        <a href="" class="btn btn-primary">Edit</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
+
+<%-include('../layouts/footer.ejs') %> 
